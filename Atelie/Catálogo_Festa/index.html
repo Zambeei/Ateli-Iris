@@ -1,0 +1,855 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>💍 Vestidos de Noiva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* ================================
+           FONTE
+           ================================ */
+
+        body h1 {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+
+        /* ================================
+           PÁGINA
+           ================================ */
+
+        body {
+            background-color: #D6CCC2;
+            color: #22223b;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0 30px;
+        }
+
+
+        /* ================================
+           CABEÇALHO
+           ================================ */
+
+        header {
+            background: linear-gradient(135deg, #fffaf5, #e8ddd5);
+            padding: 35px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(34, 34, 59, 0.15);
+            position: relative;
+        }
+
+
+        /* Pequeno texto acima do título */
+
+        .subtitulo {
+            display: block;
+            color: #8a7165;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+
+        /* ================================
+           TÍTULO BOUTIQUE
+           ================================ */
+
+        header h1 {
+            color: #4b3b35;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 3.1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0;
+            position: relative;
+        }
+
+
+        /* Linha delicada acima do título */
+
+        header h1::before {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 1px;
+            background-color: #b49a8c;
+            margin: 0 auto 15px;
+        }
+
+
+        /* Nome do ateliê abaixo do título */
+
+        header h1::after {
+            content: "✦  ATELIÊ IRÍS  ✦";
+            display: block;
+            color: #a58b7d;
+            font-family: "Quicksand", sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            margin-top: 15px;
+        }
+
+
+        /* Texto de descrição */
+
+        header p {
+            color: #5c514b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-style: italic;
+            max-width: 650px;
+            margin: 15px auto 0;
+        }
+
+
+        /* Palavras em destaque */
+
+        header strong {
+            color: #22223b;
+            font-style: normal;
+        }
+
+
+        /* Linha decorativa */
+
+        header::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: #22223b;
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+
+
+        /* ================================
+           TÍTULOS
+           ================================ */
+
+        h2 {
+            margin-top: 30px;
+        }
+
+
+        h3 {
+            color: #4a4e69;
+            margin-top: 30px;
+        }
+
+
+        /* ================================
+           MENU
+           ================================ */
+
+        nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+
+        nav ul {
+            padding-left: 20px;
+        }
+
+
+        nav a {
+            color: #22223b;
+            text-decoration: none;
+        }
+
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================================
+           GRID DOS VESTIDOS
+           ================================ */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+
+        /* ================================
+           CARD DOS VESTIDOS
+           ================================ */
+
+        .vestido {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+
+        /* Efeito ao passar o mouse */
+
+        .vestido:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 16px rgba(0, 0, 0, 0.20);
+        }
+
+
+        .vestido img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+
+        .vestido p {
+            line-height: 1.5;
+        }
+
+
+        /* ================================
+           TABELA DE TAMANHOS
+           ================================ */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin-bottom: 30px;
+        }
+
+
+        th,
+        td {
+            border: 1px solid #22223b;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        th {
+            background-color: #22223b;
+            color: white;
+        }
+
+
+        /* ================================
+           RESPONSIVIDADE
+           ================================ */
+
+        @media (max-width: 800px) {
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            body {
+                padding: 0 15px;
+            }
+
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            header {
+                padding: 30px 20px;
+            }
+
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+
+            header p {
+                font-size: 1rem;
+            }
+
+
+            .subtitulo {
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         CABEÇALHO
+         ================================ -->
+
+    <header>
+
+        <span class="subtitulo">
+            ATELIÊ IRÍS • ELEGÂNCIA • SONHOS
+        </span>
+
+
+        <h1>
+            Vestidos de Noiva
+        </h1>
+
+
+        <p>
+
+            No ateliê Iris, preservamos o
+            <strong><em>conforto e a experiência</em></strong>
+            desde a prova até o dia do casamento.
+
+            Sabemos que o casamento é um
+            <strong>momento especial e único na vida</strong>,
+            por isso viemos com modelos inovadores
+            <em>para cada tipo de noiva.</em>
+
+        </p>
+
+    </header>
+
+
+
+    <!-- ================================
+         MODELOS
+         ================================ -->
+
+    <h2>
+        Modelos 👰
+    </h2>
+
+
+
+    <!-- ================================
+         MENU
+         ================================ -->
+
+    <nav>
+
+        <h3>
+            Pegue um atalho!
+        </h3>
+
+
+        <ul>
+
+            <li>
+                <a href="#Sereia">
+                    Sereia
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#Princesa">
+                    Princesa
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#Tamanho">
+                    Tamanhos
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================================
+         SEREIA
+         ================================ -->
+
+    <h3 id="Sereia">
+        Vestidos Sereia
+    </h3>
+
+
+    <div class="grid-container">
+
+
+        <!-- VESTIDO 1 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_ZibSere.jpeg"
+                alt="Vestido Sereia Zibeline"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Sereia Zibeline
+                </strong>
+
+                — Preço: R$ 5.400,00
+
+                <br><br>
+
+                Vestido de noiva sereia confeccionado em
+                zibeline branco-marfim, com brilho acetinado,
+                decote coração, alças finas, drapeado diagonal
+                no corpete, saia estruturada e cauda longa.
+
+                Uma peça elegante, sofisticada e ideal para
+                noivas que desejam um visual clássico e marcante.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 2 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_SereiT.jpeg"
+                alt="Vestido Sereia Renda"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Sereia Renda
+                </strong>
+
+                — Preço: R$ 3.900,00
+
+                <br><br>
+
+                Vestido de noiva sereia em renda branca,
+                com decote coração, alças finas, corpete
+                drapeado, modelagem ajustada ao corpo e
+                cauda longa com acabamento delicado em renda.
+
+                Uma peça romântica, elegante e sofisticada.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 3 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_SereiT.jpeg"
+                alt="Vestido Sereia Tule"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Sereia Tule
+                </strong>
+
+                — Preço: R$ 2.299,00
+
+                <br><br>
+
+                Vestido de noiva estilo sereia em tule
+                branco-marfim, com corpete ajustado,
+                decote delicado, aplicações florais sutis,
+                saia fluida em camadas leves e cauda elegante.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 4 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_ChiffonSerei.jpeg"
+                alt="Vestido Sereia Chiffon"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Sereia Chiffon Marfim
+                </strong>
+
+                — Preço: R$ 3.390,00
+
+                <br><br>
+
+                Vestido de noiva estilo sereia em chiffon
+                branco-marfim, com corpete ajustado,
+                decote coração, drapeado delicado,
+                saia fluida em camadas leves e cauda longa.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 5 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_CrepeSerei.jpeg"
+                alt="Vestido Sereia Crepe"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Sereia Crepe Marfim
+                </strong>
+
+                — Preço: R$ 1.900,00
+
+                <br><br>
+
+                Vestido de noiva estilo sereia em crepe
+                branco-marfim, com corpete ajustado,
+                decote coração, drapeado elegante,
+                modelagem que valoriza a silhueta e cauda longa.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 6 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_OrgSerei.jpeg"
+                alt="Vestido Sereia Organza"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Sereia Organza
+                </strong>
+
+                — Preço: R$ 1.999,00
+
+                <br><br>
+
+                Vestido de noiva estilo sereia em organza
+                branco-marfim, com corpete ajustado,
+                decote coração, drapeado delicado,
+                saia fluida em camadas leves e cauda elegante.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================================
+         PRINCESA
+         ================================ -->
+
+    <h3 id="Princesa">
+        Vestidos Princesa
+    </h3>
+
+
+    <div class="grid-container">
+
+
+        <!-- VESTIDO 1 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_PrinOrga.jpeg"
+                alt="Vestido Princesa Organza"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Princesa Organza Marfim
+                </strong>
+
+                — Preço: R$ 7.390,00
+
+                <br><br>
+
+                Vestido de noiva estilo princesa em organza
+                branco-marfim, com corpete ajustado,
+                decote coração, cintura marcada,
+                saia ampla em camadas leves e aplicações
+                florais delicadas.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 2 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_PrincesZibe.jpeg"
+                alt="Vestido Princesa Zibeline"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Princesa Zibeline Marfim
+                </strong>
+
+                — Preço: R$ 8.290,00
+
+                <br><br>
+
+                Vestido de noiva estilo princesa em zibeline
+                branco-marfim, com corpete ajustado,
+                decote coração, drapeado elegante,
+                cintura marcada e saia ampla com cauda longa.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- VESTIDO 3 -->
+
+        <div class="vestido">
+
+            <img
+                src="img_PrinceRenda.jpeg"
+                alt="Vestido Princesa Renda"
+            >
+
+
+            <p>
+
+                <strong>
+                    Vestido Princesa Renda
+                </strong>
+
+                — Preço: R$ 6.199,00
+
+                <br><br>
+
+                Vestido de noiva estilo princesa em renda
+                branco-marfim, com corpete ajustado,
+                decote delicado, aplicações florais,
+                cintura marcada, saia ampla e cauda longa
+                com acabamento scalloped.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================================
+         TAMANHOS
+         ================================ -->
+
+    <h2 id="Tamanho">
+        Tamanhos
+    </h2>
+
+
+    <table>
+
+        <tr>
+
+            <th>
+                Tamanho
+            </th>
+
+            <th>
+                Busto
+            </th>
+
+            <th>
+                Cintura
+            </th>
+
+            <th>
+                Quadril
+            </th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                P
+            </td>
+
+            <td>
+                84–88 cm
+            </td>
+
+            <td>
+                66–70 cm
+            </td>
+
+            <td>
+                90–94 cm
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                M
+            </td>
+
+            <td>
+                89–93 cm
+            </td>
+
+            <td>
+                71–75 cm
+            </td>
+
+            <td>
+                95–99 cm
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                G
+            </td>
+
+            <td>
+                94–99 cm
+            </td>
+
+            <td>
+                76–81 cm
+            </td>
+
+            <td>
+                100–105 cm
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                GG
+            </td>
+
+            <td>
+                100–106 cm
+            </td>
+
+            <td>
+                82–88 cm
+            </td>
+
+            <td>
+                106–112 cm
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+    <!-- ================================
+         VOLTAR
+         ================================ -->
+
+    <h4>
+
+        <a
+            href="C:\Users\Aluno\Desktop\Atelie\index.html"
+            target="_blank"
+        >
+            Voltar para a página inicial
+        </a>
+
+    </h4>
+
+
+</body>
+
+</html>
+```
