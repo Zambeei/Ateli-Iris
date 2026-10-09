@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novo cliente</title>
+
+    <style>
+        body {
+            font: 16px Arial, sans-serif;
+            color: #2B2D33;
+            background: #edede9;
+            margin: 0;
+        }
+
+        main {
+            max-width: 560px;
+            margin: 46px auto;
+            background: #FFFFFF;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #0A192F;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 5px;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font: inherit;
+        }
+
+        button {
+            margin-top: 22px;
+            padding: 11px 18px;
+            background: #c9ada7;
+            color: white;
+            border: 0;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .erro {
+            color: #8A1D1D;
+        }
+
+        a {
+            color: #1E4E79;
+        }
+
+        header {
+            border-bottom: 4px solid #22223b;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+
+    <header>
+        <div class="logo-container">
+            <img
+                src="img_logo.jpeg"
+                alt="Irís Atelier"
+                style="display: block; margin: 0 auto; border-radius: 50%; width: 165px; height: 165px; object-fit: cover;"
+            >
+        </div>
+
+        <h1>Encontre seu vestido</h1>
+
+        <h5>
+            Para ser cliente é necessário preencher corretamente o formulário abaixo
+            com os respectivos dados cadastrais. Os campos são de preenchimento
+            obrigatórios e essenciais para realizarmos o envio do seu futuro pedido.
+        </h5>
+    </header>
+
+    <p class="erro" role="alert"></p>
+
+    <form >
+        <label for="nome">Nome</label>
+        <input
+            id="nome"
+            name="nome"
+            type="text"
+            maxlength="100"
+            required
+        >
+
+        <label for="email">Email</label>
+        <input
+            id="email"
+            name="email"
+            type="email"
+            maxlength="120"
+            required
+        >
+
+        <label for="telefone">Telefone opcional</label>
+        <input
+            id="telefone"
+            name="telefone"
+            type="text"
+            maxlength="20"
+        >
+
+        <label for="cpf">CPF opcional</label>
+        <input
+            id="cpf"
+            name="cpf"
+            type="text"
+            maxlength="20"
+        >
+
+        <button type="submit">
+            Salvar cadastro
+        </button>
+
+    </form>
+
+</main>
+
+</body>
+</html>
