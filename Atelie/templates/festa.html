@@ -4,24 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vestidos de Festa</title>
+    <title>🪩 Vestidos de Festa</title>
 
     <style>
+
+        /* ================================
+           FONTE
+           ================================ */
+
+        body h1 {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+
+        /* ================================
+           PÁGINA
+           ================================ */
+
         body {
-            background-color: #F2E9E4;
+            background-color: #D6CCC2;
             color: #22223b;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0 30px;
         }
 
+
+        /* ================================
+           CABEÇALHO
+           ================================ */
+
         header {
-            border-bottom: 4px solid #22223b;
-            padding: 16px;
-            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fffaf5, #e8ddd5);
+            padding: 35px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(34, 34, 59, 0.15);
+            position: relative;
         }
 
-        /* GRID DOS VESTIDOS */
+
+        /* Pequeno texto acima do título */
+
+        .subtitulo {
+            display: block;
+            color: #8a7165;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+
+        /* ================================
+           TÍTULO BOUTIQUE
+           ================================ */
+
+        header h1 {
+            color: #4b3b35;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 3.1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0;
+            position: relative;
+        }
+
+
+        /* Linha delicada acima do título */
+
+        header h1::before {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 1px;
+            background-color: #b49a8c;
+            margin: 0 auto 15px;
+        }
+
+
+        /* Nome do ateliê abaixo do título */
+
+        header h1::after {
+            content: "✦  ATELIÊ IRÍS  ✦";
+            display: block;
+            color: #a58b7d;
+            font-family: "Quicksand", sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 4px;
+            margin-top: 15px;
+        }
+
+
+        /* Texto de descrição */
+
+        header p {
+            color: #5c514b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-style: italic;
+            max-width: 650px;
+            margin: 15px auto 0;
+        }
+
+
+        /* Palavras em destaque */
+
+        header strong {
+            color: #22223b;
+            font-style: normal;
+        }
+
+
+        /* Linha decorativa */
+
+        header::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: #22223b;
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+
+
+        /* ================================
+           TÍTULOS
+           ================================ */
+
+        h2 {
+            margin-top: 30px;
+        }
+
+
+        h3 {
+            color: #4a4e69;
+            margin-top: 30px;
+        }
+
+
+        /* ================================
+           MENU
+           ================================ */
+
+        nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+
+        nav ul {
+            padding-left: 20px;
+        }
+
+
+        nav a {
+            color: #22223b;
+            text-decoration: none;
+        }
+
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================================
+           GRID DOS VESTIDOS
+           ================================ */
+
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -29,13 +189,28 @@
             margin-bottom: 30px;
         }
 
-        /* CADA VESTIDO */
+
+        /* ================================
+           CARD DOS VESTIDOS
+           ================================ */
+
         .vestido {
             background-color: white;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
         }
+
+
+        /* Efeito ao passar o mouse */
+
+        .vestido:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 16px rgba(0, 0, 0, 0.20);
+        }
+
 
         .vestido img {
             width: 100%;
@@ -44,46 +219,23 @@
             border-radius: 8px;
         }
 
+
         .vestido p {
             line-height: 1.5;
         }
 
-        h2 {
-            margin-top: 30px;
-        }
 
-        h3 {
-            color: #4a4e69;
-            margin-top: 30px;
-        }
+        /* ================================
+           TABELA DE TAMANHOS
+           ================================ */
 
-        nav {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        nav ul {
-            padding-left: 20px;
-        }
-
-        nav a {
-            color: #22223b;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* TABELA DE TAMANHOS */
         table {
             width: 100%;
             border-collapse: collapse;
             background-color: white;
             margin-bottom: 30px;
         }
+
 
         th,
         td {
@@ -92,34 +244,67 @@
             text-align: center;
         }
 
+
         th {
             background-color: #22223b;
             color: white;
         }
 
-        /* RESPONSIVIDADE */
+
+        /* ================================
+           RESPONSIVIDADE
+           ================================ */
+
         @media (max-width: 800px) {
+
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
             }
+
         }
 
+
         @media (max-width: 500px) {
+
             body {
                 padding: 0 15px;
             }
 
+
             .grid-container {
                 grid-template-columns: 1fr;
             }
+
+
+            header {
+                padding: 30px 20px;
+            }
+
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+
+            header p {
+                font-size: 1rem;
+            }
+
+
+            .subtitulo {
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>Vestidos de festa</h1>
+        <h1>Vestidos de festa 🪩</h1>
 
         <p>
             O ateliê Iris deseja proporcionar
@@ -153,7 +338,7 @@
     <div class="grid-container">
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_AzP.jpeg" alt="Vestido Azul Princesa">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_AzP.jpeg')}}" alt="Vestido Azul Princesa">
 
             <p>
                 <strong>Vestido Azul Princesa Encantada</strong>
@@ -174,7 +359,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_RG.jpeg" alt="Roxo Glamour">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_RG.jpeg')}}" alt="Roxo Glamour">
 
             <p>
                 <strong>Vestido Roxo Glamour Organza</strong>
@@ -194,7 +379,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_Srosa.jpeg" alt="Sereia Rosa">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_Srosa.jpeg')}}" alt="Sereia Rosa">
 
             <p>
                 <strong>Vestido Sereia Rosa Organza</strong>
@@ -222,7 +407,7 @@
     <div class="grid-container">
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_VCA.jpeg" alt="Vestido Azul Royal">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_VCA.jpeg')}}" alt="Vestido Azul Royal">
 
             <p>
                 <strong>Vestido Moderno Azul Royal</strong>
@@ -242,7 +427,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_VcEs.jpeg" alt="Crepe Esmeralda">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_VcEs.jpeg')}}" alt="Crepe Esmeralda">
 
             <p>
                 <strong>Vestido Esmeralda Verde Musgo</strong>
@@ -262,7 +447,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_Cver.jpeg" alt="Crepe Vermelho">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_Cver.jpeg')}}" alt="Crepe Vermelho">
 
             <p>
                 <strong>Vestido Rubi Vermelho</strong>
@@ -290,7 +475,7 @@
     <div class="grid-container">
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_AmeR.jpeg" alt="Renda Roxo Brilhante">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_AmeR.jpeg')}}" alt="Renda Roxo Brilhante">
 
             <p>
                 <strong>Vestido Ametista Roxo Brilhante</strong>
@@ -311,7 +496,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_AzR.jpeg" alt="Renda Azul">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_AzR.jpeg')}}" alt="Renda Azul">
 
             <p>
                 <strong>Vestido Longo Azul</strong>
@@ -330,7 +515,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_EsR.jpeg" alt="Renda Verde">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_EsR.jpeg')}}" alt="Renda Verde">
 
             <p>
                 <strong>Vestido Esmeralda Verde</strong>
@@ -361,7 +546,7 @@
     <div class="grid-container">
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_MIDIcauda.jpeg" alt="Vestido Midi Preto com Cauda">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_MIDIcauda.jpeg')}}" alt="Vestido Midi Preto com Cauda">
 
             <p>
                 <strong>Vestido Midi Preto com Cauda</strong>
@@ -381,7 +566,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_midiSereia.jpeg" alt="Crepe Midi Ombro">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_midiSereia.jpeg')}}" alt="Crepe Midi Ombro">
 
             <p>
                 <strong>Vestido Midi Sereia</strong>
@@ -397,7 +582,7 @@
 
 
         <div class="vestido">
-            <img src="/static/Catalogo_festa/img_midiMusgo.jpeg" alt="Crepe Midi Musgo">
+            <img src="{{url_for('static', filename='Catalogo_Festa/img_midiMusgo.jpeg')}}" alt="Crepe Midi Musgo">
 
             <p>
                 <strong>Vestido Midi Musgo</strong>
@@ -465,7 +650,7 @@
     <!-- ==================== VOLTAR ==================== -->
 
     <h4>
-        <a href="/templates/menu.html" target="_blank">
+        <a href="{{url_for ('home')}}" target="_blank">
             Voltar para a página inicial
         </a>
     </h4>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrinho | Ateliê Íris</title>
+</head>
+<body>
+    <h1>Meu carrinho — Ateliê Íris</h1>
+
+    <a href="{{ url_for('inicio') }}">Voltar ao início</a>
+
+    {% if itens %}
+        {% for item in itens %}
+        <div>
+            <img
+                src="{{ url_for('static', filename=item.imagem) }}"
+                alt="{{ item.nome }}"
+                width="120"
+            >
+
+            <h2>{{ item.nome }}</h2>
+
+            <p>
+                Preço unitário:
+                R$ {{ "%.2f"|format(item.preco)|replace(".", ",") }}
+            </p>
+
+            <form
+                action="{{ url_for('atualizar', produto_id=item.id) }}"
+                method="POST"
+            >
+                <label for="qtd-{{ item.id }}">Quantidade:</label>
+
+                <input
+                    id="qtd-{{ item.id }}"
+                    type="number"
+                    name="quantidade"
+                    min="0"
+                    max="99"
+                    value="{{ item.quantidade }}"
+                    required
+                >
+
+                <button type="submit">Atualizar</button>
+            </form>
+
+            <p>
+                Subtotal:
+                R$ {{ "%.2f"|format(item.subtotal)|replace(".", ",") }}
+            </p>
+
+            <form
+                action="{{ url_for('remover', produto_id=item.id) }}"
+                method="POST"
+            >
+                <button type="submit">Remover</button>
+            </form>
+        </div>
+        <hr>
+        {% endfor %}
+
+        <h2>
+            Total: R$ {{ "%.2f"|format(total)|replace(".", ",") }}
+        </h2>
+
+        <form action="{{ url_for('finalizar') }}" method="POST">
+            <button type="submit">Finalizar pedido</button>
+        </form>
+    {% else %}
+        <p>Seu carrinho está vazio.</p>
+        <a href="{{ url_for('inicio') }}">Voltar às compras</a>
+    {% endif %}
+</body>
+</html>
