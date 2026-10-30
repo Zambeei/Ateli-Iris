@@ -27,17 +27,16 @@
 
         <form action="{{ url_for('salvar_cliente') }}" method="POST">
             <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" maxlength="100" required>
+            <input id="nome" name="nome" type="text" maxlength="100" required placeholder="Digite o seu nome">
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" maxlength="120" required>
+            <input id="email" name="email" type="email" maxlength="120" required placeholder="Digite o seu melhor E-mail">
 
             <label for="telefone">Telefone opcional</label>
-            <input id="telefone" name="telefone" type="text" maxlength="20">
+            <input id="telefone" name="telefone" type="text" maxlength="20" placeholder="Digite o seu telefone">
 
             <label for="cpf">CPF opcional (somente números)</label>
-            <input id="cpf" name="cpf" type="text" maxlength="11" pattern="[0-9]{11}"
-                title="Digite os 11 números do CPF">
+            <input id="cpf" name="cpf" type="text" maxlength="11" pattern="[0-9]{11}" placeholder="Digite o seu CPF">
 
             <button type="submit">Salvar Cadastro</button>
         </form>

@@ -143,10 +143,6 @@ small {
 
 
 
-
-
-
-
 /* ESTILIZAÇÃO DO FORMULARIO*/
 body {
   font:
@@ -205,3 +201,121 @@ header {
 }
 
 
+
+/* ESTILIZAÇÃO DO CARRINHO*/
+
+/* Container principal do carrinho (mesmo molde elegante do site) */
+.carrinho-container {
+    background-color: #f4eee8;
+    border: 2px solid #d8ccbe;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Cada item individual dentro do carrinho */
+.carrinho-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+}
+
+.carrinho-img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.carrinho-info {
+    flex: 1;
+}
+
+.carrinho-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.carrinho-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Formulário de quantidade */
+.form-qtd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.form-qtd input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Divisor entre itens */
+.divisor {
+    border: 0;
+    border-top: 1px solid #d8ccbe;
+    margin: 20px 0;
+}
+
+/* Resumo do total e botões */
+.carrinho-resumo {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.carrinho-resumo h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilização geral dos botões e links de ação */
+.btn-atualizar, .btn-remover, .btn-finalizar, .btn-voltar {
+    background-color: #b59b84; /* Tom elegante combinando com o tema */
+    color: #ffffff !important;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.btn-atualizar:hover, .btn-remover:hover, .btn-finalizar:hover, .btn-voltar:hover {
+    background-color: #9e846e;
+}
+
+.btn-remover {
+    background-color: #d9534f; /* Tom avermelhado suave apenas para remoção */
+}
+
+.btn-remover:hover {
+    background-color: #c9302c;
+}
+
+.topo-acoes {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.carrinho-vazio {
+    text-align: center;
+    padding: 20px;
+}

@@ -48,6 +48,10 @@ def pedidos():
     return render_template('pedidos.html', pedidos=lista_pedidos)
 
 
+@app.route('/carrinho')
+def carrinho():
+    return render_template('carrinho.html')
+
 @app.route('/debutante')
 def debutante():
     return render_template('debutante.html')
